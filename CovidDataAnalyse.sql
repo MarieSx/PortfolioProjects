@@ -96,7 +96,7 @@ Seychelles	98910	2021-10-03 00:00:00.000	21507	21.7440097057931
 
 ![image](https://user-images.githubusercontent.com/89245931/136658247-4bdab476-e9ac-4cee-8116-313e59f8f216.png)
 
-
+<https://user-images.githubusercontent.com/89245931/136658247-4bdab476-e9ac-4cee-8116-313e59f8f216.png>
 
 
 
