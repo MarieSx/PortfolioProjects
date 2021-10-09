@@ -1,10 +1,10 @@
---SELECT *
---FROM PortfolioPoject..CovidDeaths$
---ORDER BY 3,4;
+SELECT *
+FROM PortfolioPoject..CovidDeaths$
+ORDER BY 3,4;
 
---SELECT *
---FROM PortfolioPoject..CovidVaccinations$
---ORDER BY 3,4;
+SELECT *
+FROM PortfolioPoject..CovidVaccinations$
+ORDER BY 3,4;
 
 --Select data that we goig to be using
 SELECT Location, date, total_cases, new_cases, total_deaths, population
