@@ -1,11 +1,15 @@
 --Queries using Trsact-SQL SSMS, prepare for Tableau viz
--- 1. 
+
+--STEP ONE: CREATE FOUR TABLES FOR TARGETED NUMBERS
+
+-- #1. total_cases | total_deaths | DeathPercentage 
+-- note: parts of the CovidDeaths$ Table organised by continent not countries, should be eliminated in this step
 
 Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
 From PortfolioProject..CovidDeaths
---Where location like '%states%'
+--Where location like '%states%' --this is checking process, not used in the final report
 where continent is not null 
---Group By date
+--Group By date --this is checking process, not used in the final report
 order by 1,2
 
 -- Just a double check based off the data provided
@@ -19,8 +23,13 @@ order by 1,2
 ----Group By date
 --order by 1,2
 
+--#1 output: 
+total_cases	total_deaths	DeathPercentage
+236035422	4819522	        2.04186386905945
 
--- 2. 
+
+
+-- #2.  location | TotalDeathCount
 
 -- We take these out as they are not inluded in the above queries and want to stay consistent
 -- European Union is part of Europe
@@ -33,8 +42,18 @@ and location not in ('World', 'European Union', 'International')
 Group by location
 order by TotalDeathCount desc
 
+--#2 Output:
+location	TotalDeathCount
+Europe	        1242961
+South America	1149664
+Asia		1137236
+North America	1074474
+Africa		212886
+Oceania		2301
 
--- 3.
+
+-- #3. location | population | HighestInfectionCount | PercentPopulationInfected
+
 
 Select Location, Population, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
 From PortfolioProject..CovidDeaths
@@ -42,9 +61,17 @@ From PortfolioProject..CovidDeaths
 Group by Location, Population
 order by PercentPopulationInfected desc
 
+--#3 Output (limit 6):
+Location	Population	HighestInfectionCount	PercentPopulationInfected
+Seychelles	98910		21626			21.8643210999899
+Montenegro	628051		133767			21.2987480316089
+Andorra		77354		15284			19.7585128112315
+San Marino	34010		5460			16.0541017347839
+Czechia		10724553	1696016			15.8143281123232
+Bahrain		1748295		275394			15.7521470918809
 
--- 4.
 
+-- #4. location | population | date | HighestInfectionCount | PercentPopulationInfected
 
 Select Location, Population,date, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
 From PortfolioProject..CovidDeaths
@@ -52,12 +79,32 @@ From PortfolioProject..CovidDeaths
 Group by Location, Population, date
 order by PercentPopulationInfected desc
 
+--#4 Output (limit 6):
+Seychelles	98910	2021-10-06 00:00:00.000	21626	21.8643210999899
+Seychelles	98910	2021-10-04 00:00:00.000	21556	21.7935496916389
+Seychelles	98910	2021-10-05 00:00:00.000	21556	21.7935496916389
+Seychelles	98910	2021-10-01 00:00:00.000	21507	21.7440097057931
+Seychelles	98910	2021-10-02 00:00:00.000	21507	21.7440097057931
+Seychelles	98910	2021-10-03 00:00:00.000	21507	21.7440097057931
+
+
+--STEP TWO: CHECK AND CLEAN EXCEL TABLES
+-- Save above info into Excel, and change #3 Null to 0, modify #4 date column into date type
+
+--STEP THREE: IMPORT TABLES INTO TABLEAU
+-- adding decimals to death percentage to make it more accurate
 
 
 
 
 
-----Below are orginally draft version, for checking the thinking process and other interesting numbers ----
+
+
+
+
+
+
+----Below are orginally draft version, for checking the thinking process and other insights ----
 
 SELECT *
 FROM PortfolioPoject..CovidDeaths$
