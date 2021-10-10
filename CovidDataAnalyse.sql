@@ -92,12 +92,11 @@ Seychelles	98910	2021-10-03 00:00:00.000	21507	21.7440097057931
 -- Save above info into Excel, and change #3 Null to 0, modify #4 date column into date type
 
 --STEP THREE: IMPORT TABLES INTO TABLEAU
--- adding decimals to death percentage to make it more accurate
+-- #1 adding decimals to death percentage to make it more accurate
 
 ![image](https://user-images.githubusercontent.com/89245931/136658247-4bdab476-e9ac-4cee-8116-313e59f8f216.png)
 
-<https://user-images.githubusercontent.com/89245931/136658247-4bdab476-e9ac-4cee-8116-313e59f8f216.png>
-
+-- #2 making sheet 1 - 4 in different viz
 
 
 
