@@ -91,6 +91,7 @@ Seychelles	98910	2021-10-03 00:00:00.000	21507	21.7440097057931
 --STEP TWO: CHECK AND CLEAN EXCEL TABLES
 -- Save above info into Excel, and change #3 Null to 0, modify #4 date column into date type
 
+
 --STEP THREE: IMPORT TABLES INTO TABLEAU
 -- #1 adding decimals to death percentage to make it more accurate
 
