@@ -1,11 +1,6 @@
 # This project mainly focus on ETL process using Nashville Housing dataset
 https://github.com/MarieSx/PortfolioProjects/files/7331059/Nashville.Housing.Data.for.Data.Cleaning.xlsx
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
 
 
 /*
