@@ -1,5 +1,3 @@
-
-
 -- Cleaning Data in T-SQL Queries
 -- Using NashvilleHousing dataset
 
