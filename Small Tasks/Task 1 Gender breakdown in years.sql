@@ -1,5 +1,5 @@
 /*
-Task:
+Task 1:
 Create a visualisation that providesw a breakdown between the male and female employees working in the company each year, starting from 1990.
 
 Tools: MySQL + Tableau Public
