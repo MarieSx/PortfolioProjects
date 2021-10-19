@@ -55,7 +55,7 @@ OUTPUT (LIMIT 7):
 -- 3. Export to CSV and import to Tableau
 
 Tableau
-
+/*
 1. Create Stacked bar chart, find out the chart has obscure insight
 ![image](https://user-images.githubusercontent.com/89245931/137867508-a0c162fd-8663-4679-8fc9-5c4a7a7e3e27.png)
 #Note: it only shows how many employees were hired in certain year. But numbers should be accumulated. 
@@ -85,5 +85,6 @@ Mark - number of employee - Computer Using - table(down)
 Clike any area in bar - format - Field - % of total sum - total/default - Numbers - percentage - one decimal
 ![image](https://user-images.githubusercontent.com/89245931/137900972-8ef16f48-3fbd-4f39-ac4e-c54cb56ae8a7.png)
 
+*/
 
 
