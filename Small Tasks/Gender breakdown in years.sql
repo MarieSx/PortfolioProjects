@@ -1,3 +1,4 @@
+/*
 Task:
 Create a visualisation that providesw a breakdown between the male and female employees working in the company each year, starting from 1990.
 
@@ -13,7 +14,7 @@ Steps:
 Choice between pie chart and bar chart.
 When data shows single year, pie is better
 But if want to show M F occupation in several years, then stacked bar chart can shows both occupations and trend.
-
+*/
 SQL
 -- 1. Check details
 SELECT * FROM employees_mod.t_employees;
@@ -84,6 +85,9 @@ Mark - number of employee - Computer Using - table(down)
 ![image](https://user-images.githubusercontent.com/89245931/137900839-515601ef-024e-4d47-8b0d-0a3c92b68aac.png)
 Clike any area in bar - format - Field - % of total sum - total/default - Numbers - percentage - one decimal
 ![image](https://user-images.githubusercontent.com/89245931/137900972-8ef16f48-3fbd-4f39-ac4e-c54cb56ae8a7.png)
+
+7. Finish graph
+https://public.tableau.com/views/Genderbreakdowninyears/Chart1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
 
 */
 
